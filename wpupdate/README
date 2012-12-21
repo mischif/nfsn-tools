@@ -1,0 +1,49 @@
+##	     NearlyFreeSpeech.Net WordPress Update Script README               ##
+
+1) What does this script do?
+This script updates the core files of an SVN install of WordPress.
+
+2) What if I installed WordPress via ZIP file?
+This script will not work for you. However, should you later want to reinstall
+WordPress using SVN to take advantage of this script, take a look at wpinstall.
+
+3) Does this script update plugins as well?
+No, only the core Wordpress files. However, jjeaton has released his own script
+that updates plugins, I don't see any reason you couldn't use both.
+
+4) Is there any setup with this script?
+Yes. First you must move the publicupdate folder to somewhere in /home/public.
+You may rename it if you wish; I place it directly in /home/public and call
+it wpupdate.
+
+After you have placed the folder you must open the file htaccess inside the
+folder and change both the address in AuthDigestDomain to point to the folder's
+location on the web and the address in AuthUserFile to point to the folder's
+location on disk. Use the Apache Site Root in your site's information to find
+the location of the folder on disk. Leave the .htdigest ending there.
+
+After modifying the file, change the name of the file to ".htaccess" and get a
+long, random string of characters to use as a password - the longer the better,
+after setting the script up you'll never have to touch it again. Once you have
+obtained the password, navigate inside the folder in a terminal and run the
+command "htdigest -c .htdigest "Private Interface" wpupdate" without the outer
+quotes. Enter the password twice to complete this section.
+
+Finally, open wpupdate.sh in a text editor and change the values of PASSWORD and
+UPDATEADDR to the password you used in the last step and the location of the
+folder on the web, respectively. If the repository for your WordPress install is
+not the official WordPress repository (e.g., the automattic repository), then
+change the value of TAGSURL to point to your repository.
+
+At this point you should be able to run the script.
+
+5) How do I run this script?
+wpupdate.sh /path/to/WordPress/install/location/
+The trailing slash at the end is important; don't forget it.
+
+6) What license is this script released under?
+This script, and all associated files, are released under a Creative Commons
+BY-NC-SA 3.0 US license.
+
+7) I would like to thank you for the script. Do you take donations?
+Yes. Yes I do. I take Dwolla or Paypal donations sent to donate@mischivous.com

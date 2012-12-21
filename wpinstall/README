@@ -1,0 +1,27 @@
+##	     NearlyFreeSpeech.Net WordPress Install Tool README               ##
+
+1) What does this script do?
+This script streamlines the installation of WordPress on NearlyFreeSpeech.Net.
+
+2) Are there any prerequisites for this script?
+The prerequisites for this script are a running MySQL process, a database in
+that MySQL process, and a user that can act on that database.
+
+3) How can I fulfill the prerequisites?
+You can get a running MySQL process by either buying one or restarting a stopped
+one. Next, you can create a user at the same time you create a database through
+the member panel. 
+
+4) How do I run this script?
+wpinstall.sh /path/to/desired/install/location/
+Enter the requested information when prompted, the script does the rest.
+The trailing slash at the end is important; don't forget it.
+
+5) Can I use this script to update my WordPress installation as well?
+No, but the script wpupdate should take care of that.
+
+6) What license is this script released under?
+This script is released under a Creative Commons BY-NC-SA 3.0 US license.
+
+7) I would like to thank you for the script. Do you take donations?
+Yes. Yes I do. I take Dwolla or Paypal donations sent to donate@mischivous.com

@@ -1,0 +1,7 @@
+AuthType Digest
+AuthName "Private Interface"
+AuthDigestDomain http://www.example.com/publicupdate/
+
+AuthDigestProvider file
+AuthUserFile /f2/example/public/publicupdate/.htdigest
+Require user wpupdate
